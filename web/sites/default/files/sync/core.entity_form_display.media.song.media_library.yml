@@ -1,0 +1,32 @@
+uuid: 9eaf04fb-e838-43b1-b99e-1ab6e9e330b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.song.field_duraci_pon
+    - field.field.media.song.field_letras
+    - field.field.media.song.field_media_audio_file_1
+    - media.type.song
+id: media.song.media_library
+targetEntityType: media
+bundle: song
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_duraci_pon: true
+  field_letras: true
+  field_media_audio_file_1: true
+  langcode: true
+  path: true
+  status: true
+  uid: true

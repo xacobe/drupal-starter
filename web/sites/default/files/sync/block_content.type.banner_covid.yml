@@ -1,0 +1,8 @@
+uuid: 28dbf77e-aa07-4873-b4b4-7ec2ff1ec8e3
+langcode: es
+status: true
+dependencies: {  }
+id: banner_covid
+label: 'Banner covid'
+revision: 0
+description: 'Aviso sobre la incidencia del Covid'

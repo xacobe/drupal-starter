@@ -1,0 +1,11 @@
+uuid: 0520c794-f78a-4181-8705-0a8473438e80
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_covid
+id: block_content.banner_covid
+target_entity_type_id: block_content
+target_bundle: banner_covid
+default_langcode: site_default
+language_alterable: false

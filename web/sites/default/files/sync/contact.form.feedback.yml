@@ -1,0 +1,14 @@
+uuid: 36645107-87aa-4e62-8140-bbcd6cc39ad2
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Comentarios sobre el sitio web'
+recipients:
+  - example@example.com
+reply: ''
+weight: 0
+message: 'Su mensaje ha sido enviado.'
+redirect: ''

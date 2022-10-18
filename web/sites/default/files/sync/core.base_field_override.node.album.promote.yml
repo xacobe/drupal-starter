@@ -1,0 +1,22 @@
+uuid: 14d70cd9-aa3e-4edf-be95-91f8e205823b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.album
+id: node.album.promote
+field_name: promote
+entity_type: node
+bundle: album
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

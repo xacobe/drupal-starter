@@ -1,0 +1,32 @@
+uuid: 1e26516a-2c1b-46a0-843c-1e9af14f3fa5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.media.portada.field_media_image_1
+    - image.style.large
+    - media.type.portada
+  module:
+    - image
+id: media.portada.default
+targetEntityType: media
+bundle: portada
+mode: default
+content:
+  field_media_image_1:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

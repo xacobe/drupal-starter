@@ -1,0 +1,25 @@
+uuid: bbf36ce9-1f11-4f3f-9b31-5d2f74dd6d48
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direccion
+    - node.type.article
+  module:
+    - address
+id: node.article.field_direccion
+field_name: field_direccion
+entity_type: node
+bundle: article
+label: Dirección
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

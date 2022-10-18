@@ -1,0 +1,52 @@
+uuid: 28820176-a69d-41f0-84c5-bc9473d78600
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.media.song.field_duraci_pon
+    - field.field.media.song.field_letras
+    - field.field.media.song.field_media_audio_file_1
+    - media.type.song
+  module:
+    - file
+    - text
+id: media.song.default
+targetEntityType: media
+bundle: song
+mode: default
+content:
+  field_duraci_pon:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_letras:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_audio_file_1:
+    type: file_audio
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

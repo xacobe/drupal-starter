@@ -1,0 +1,23 @@
+uuid: 381d9363-bfdb-4260-9da4-214f093724a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_covid
+    - field.field.block_content.banner_covid.body
+  module:
+    - text
+id: block_content.banner_covid.default
+targetEntityType: block_content
+bundle: banner_covid
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

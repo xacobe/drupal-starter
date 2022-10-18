@@ -1,0 +1,17 @@
+uuid: d94ec0e3-6292-4caf-a63e-7e3bbc2a3456
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Lugar importante'
+type: lugar_importante
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

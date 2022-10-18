@@ -1,0 +1,24 @@
+uuid: ebb2fc36-2998-4f6c-ae58-065298591d7f
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LswCVLg8z4Zk1u6pV1Dpj1qUj5YY2CQ7_ojx7bJQ8qk
+name: wide
+label: 'Ancho (1090)'
+effects:
+  09959c15-59ce-4f6d-90df-e2d7cf32bce5:
+    uuid: 09959c15-59ce-4f6d-90df-e2d7cf32bce5
+    id: image_scale
+    weight: 1
+    data:
+      width: 1090
+      height: null
+      upscale: false
+  7bcb9ecd-34d2-4b01-ae63-eb461d36d25f:
+    uuid: 7bcb9ecd-34d2-4b01-ae63-eb461d36d25f
+    id: image_resize
+    weight: 2
+    data:
+      width: 1000
+      height: 500

@@ -1,0 +1,23 @@
+uuid: 89316d82-ea19-4c36-be83-ae6de9147367
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texto_izquierda
+    - paragraphs.paragraphs_type.imagen_y_texto
+id: paragraph.imagen_y_texto.field_texto_izquierda
+field_name: field_texto_izquierda
+entity_type: paragraph
+bundle: imagen_y_texto
+label: 'Texto izquierda'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

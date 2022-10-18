@@ -1,0 +1,10 @@
+uuid: 0936bd11-1cdd-4fba-8224-417861d47747
+langcode: es
+status: true
+dependencies: {  }
+id: imagen_y_texto
+label: 'Imagen y texto'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

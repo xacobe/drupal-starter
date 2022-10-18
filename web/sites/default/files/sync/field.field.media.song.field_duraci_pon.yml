@@ -1,0 +1,23 @@
+uuid: fda7b7ee-d177-4cdc-985d-93b8eafc771c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_duraci_pon
+    - media.type.song
+id: media.song.field_duraci_pon
+field_name: field_duraci_pon
+entity_type: media
+bundle: song
+label: Duraci´po
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,14 @@
+uuid: 05f18823-ca4e-4839-b684-65fff3388144
+langcode: es
+status: true
+dependencies: {  }
+id: song
+label: Canción
+description: ''
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_audio_file_1
+field_map:
+  filesize: field_duraci_pon

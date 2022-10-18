@@ -1,0 +1,31 @@
+uuid: bfb7eb96-6a90-44ff-8524-dc87cfb63967
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagen_y_
+    - node.type.album
+    - paragraphs.paragraphs_type.imagen_y_texto
+  module:
+    - entity_reference_revisions
+id: node.album.field_imagen_y_
+field_name: field_imagen_y_
+entity_type: node
+bundle: album
+label: 'Imagen y texto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      imagen_y_texto: imagen_y_texto
+    negate: 0
+    target_bundles_drag_drop:
+      imagen_y_texto:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

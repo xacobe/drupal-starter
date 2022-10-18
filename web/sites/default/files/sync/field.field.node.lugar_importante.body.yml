@@ -1,0 +1,23 @@
+uuid: 725131d3-e236-4aa3-88c2-28a8c97f975f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.lugar_importante
+  module:
+    - text
+id: node.lugar_importante.body
+field_name: body
+entity_type: node
+bundle: lugar_importante
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,30 @@
+uuid: c7cdb430-586a-4240-a07f-c61f89e0e847
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:banner_covid:1f069755-404f-416f-b947-663b104303e5'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: alertasobreelcovid
+theme: olivero
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:1f069755-404f-416f-b947-663b104303e5'
+settings:
+  id: 'block_content:1f069755-404f-416f-b947-663b104303e5'
+  label: 'Alerta sobre el Covid'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/blog*"

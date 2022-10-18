@@ -1,0 +1,14 @@
+uuid: 61e900a4-346f-4fc5-af7e-a3bb8b89ff7e
+langcode: es
+status: true
+dependencies: {  }
+id: portada
+label: Portada
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_1
+field_map:
+  name: name

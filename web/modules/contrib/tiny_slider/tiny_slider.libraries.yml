@@ -1,0 +1,17 @@
+tiny_slider:
+  remote: https://github.com/ganlanyuan/tiny-slider
+  version: VERSION
+  license:
+    name: MIT
+    gpl-compatible: false
+  css:
+    theme:
+      /libraries/tiny-slider/dist/tiny-slider.css: {}
+      /libraries/tiny-slider/demo/css/styles.css: {}
+  js:
+    /libraries/tiny-slider/dist/tiny-slider.js: {}
+    js/tiny_slider.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once

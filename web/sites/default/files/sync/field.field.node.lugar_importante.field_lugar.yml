@@ -1,0 +1,21 @@
+uuid: 5f1f6194-be9e-4799-ba9b-faf3bc5ed21e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar
+    - node.type.lugar_importante
+  module:
+    - geofield
+id: node.lugar_importante.field_lugar
+field_name: field_lugar
+entity_type: node
+bundle: lugar_importante
+label: Lugar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

@@ -1,0 +1,11 @@
+uuid: 6a1fc6f6-3fcc-4f1b-b7f1-d18979a870c6
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.song
+id: media.song
+target_entity_type_id: media
+target_bundle: song
+default_langcode: site_default
+language_alterable: false

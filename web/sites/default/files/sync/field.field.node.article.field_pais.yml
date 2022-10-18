@@ -1,0 +1,23 @@
+uuid: de846949-5f94-4af0-95b4-cd8255b9e2c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pais
+    - node.type.article
+  module:
+    - address
+id: node.article.field_pais
+field_name: field_pais
+entity_type: node
+bundle: article
+label: País
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    ES: ES
+field_type: address_country

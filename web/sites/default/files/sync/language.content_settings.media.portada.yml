@@ -1,0 +1,11 @@
+uuid: 0798958c-6856-4b0b-9596-e7e29003c69b
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.portada
+id: media.portada
+target_entity_type_id: media
+target_bundle: portada
+default_langcode: site_default
+language_alterable: false

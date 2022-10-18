@@ -1,0 +1,33 @@
+uuid: 868c568e-3513-4e42-b862-080b1e8ed0bd
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lugar_importante.body
+    - field.field.node.lugar_importante.field_lugar
+    - node.type.lugar_importante
+  module:
+    - text
+    - user
+id: node.lugar_importante.teaser
+targetEntityType: node
+bundle: lugar_importante
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_lugar: true
+  langcode: true

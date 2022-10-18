@@ -1,0 +1,15 @@
+uuid: dc682441-4f8b-410e-8089-4380ed5da82d
+langcode: es
+status: true
+dependencies: {  }
+name: prueba
+label: prueba
+effects:
+  1dd19789-a518-45ec-beab-4ad44f888538:
+    uuid: 1dd19789-a518-45ec-beab-4ad44f888538
+    id: image_crop
+    weight: 1
+    data:
+      width: 200
+      height: 100
+      anchor: center-top

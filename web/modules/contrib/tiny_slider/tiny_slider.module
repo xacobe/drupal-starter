@@ -1,0 +1,150 @@
+<?php
+
+/**
+ * @file
+ * Contains tiny-slider.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\tiny_slider\TinySliderView;
+
+/**
+ * Implements hook_help().
+ */
+function tiny_slider_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tiny_slider module.
+    case 'help.page.tiny_slider':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module integrates Tiny Slider 2, a Vanilla javascript slider for all purposes, inspired by Owl Carousel.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tiny_slider_theme() {
+  return [
+    'tiny_slider' => [
+      'variables' => ['items' => NULL, 'settings' => NULL],
+    ],
+    'tiny_slider_views' => [
+      'variables' => [],
+    ],
+  ];
+}
+
+/**
+ * Themeable for tiny_slider.
+ */
+function template_preprocess_tiny_slider(&$variables) {
+  $items = $variables['items'];
+
+  $settings = _tiny_slider_format_settings($variables['settings']);
+
+  $variables['attributes']['class'][] = 'tiny-slider-wrapper';
+  $variables['attributes']['class'][] = 'tiny-slider';
+  $variables['attributes']['class'][] = 'tiny-slider-theme';
+  $variables['attributes']['data-settings'] = json_encode($settings);
+
+  $html = '';
+  if (!empty($items)) {
+    $i = 0;
+    foreach ($items as $item) {
+      $html .= '<div class="tiny-slider-item-inner tiny-slider-item-inner' . $i . '">' . render($item) . '</div>';
+      $i++;
+    }
+  }
+  $output = [
+    '#type' => 'markup',
+    '#markup' => $html,
+  ];
+  $variables['output'] = render($output);
+
+}
+
+/**
+ * Prepares variables for Tiny Slider Views templates.
+ *
+ * Default template: tiny-slider-views.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *     - view: A View object.
+ */
+function template_preprocess_tiny_slider_views(array &$variables) {
+  $view = $variables['view'];
+  $handler = $variables['view']->style_plugin;
+
+  //$variables['id'] = TinySliderView::getUniqueId($view);
+  $settings = _tiny_slider_format_settings($handler->options);
+  // Used JSON_FORCE_OBJECT to force the numbers
+  // in the $settings array keys.
+  $variables['attributes']['data-settings'] = json_encode($settings, JSON_FORCE_OBJECT);
+  $variables['attributes']['class'][] = 'tiny-slider-wrapper';
+  $variables['attributes']['class'][] = 'tiny-slider';
+
+  $attached = [
+    '#attached' => ['library' => ['tiny_slider/tiny_slider']],
+  ];
+  render($attached);
+  template_preprocess_views_view_unformatted($variables);
+}
+
+/**
+ * Default settings for Tiny slider.
+ */
+function _tiny_slider_default_settings($key = NULL) {
+  $settings = [
+    'image_style' => '',
+    'image_link' => '',
+    'items' => 1,
+    'margin' => '0',
+    'nav' => TRUE,
+    'autoplay' => FALSE,
+    'autoplayHoverPause' => FALSE,
+    'controls' => TRUE,
+    'loop' => TRUE,
+  ];
+
+  return isset($settings[$key]) ? $settings[$key] : $settings;
+}
+
+/**
+ * Return formatted js array of settings.
+ */
+function _tiny_slider_format_settings($settings) {
+  $settings['items'] = (int) $settings['items'];
+
+  $settings['margin'] = (int) $settings['margin'];
+  $settings['nav'] = (bool) $settings['nav'];
+  $settings['autoplay'] = (bool) $settings['autoplay'];
+  $settings['autoplayHoverPause'] = (bool) $settings['autoplayHoverPause'];
+  $settings['controls'] = (bool) $settings['controls'];
+  $settings['loop'] = (bool) $settings['loop'];
+
+  if ($settings['itemsMobile']) {
+    $dimensionMobile = (int) $settings['dimensionMobile'];
+    $itemsMobile['items'] = (int) $settings['itemsMobile'];
+    $settings['responsive'][$dimensionMobile] = $itemsMobile;
+  }
+
+  if ($settings['itemsDesktop']) {
+    $dimensionDesktop = (int) $settings['dimensionDesktop'];
+    $itemsDesktop['items'] = (int) $settings['itemsDesktop'];
+    $settings['responsive'][$dimensionDesktop] = $itemsDesktop;
+  }
+
+  if (isset($settings['image_style'])) {
+    unset($settings['image_style']);
+  }
+  if (isset($settings['image_link'])) {
+    unset($settings['image_link']);
+  }
+
+  return $settings;
+}

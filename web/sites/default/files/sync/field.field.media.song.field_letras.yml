@@ -1,0 +1,21 @@
+uuid: ea35b2d1-b4b1-47ad-987f-8f570fae6f1d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_letras
+    - media.type.song
+  module:
+    - text
+id: media.song.field_letras
+field_name: field_letras
+entity_type: media
+bundle: song
+label: Letras
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

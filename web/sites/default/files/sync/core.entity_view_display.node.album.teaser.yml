@@ -1,0 +1,39 @@
+uuid: 500f8fa3-70e4-406d-89ee-bc18df034288
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.album.body
+    - field.field.node.album.field_cancion
+    - field.field.node.album.field_imagen_y_
+    - field.field.node.album.field_portada
+    - field.field.node.album.layout_builder__layout
+    - node.type.album
+  module:
+    - text
+    - user
+id: node.album.teaser
+targetEntityType: node
+bundle: album
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cancion: true
+  field_imagen_y_: true
+  field_portada: true
+  langcode: true
+  layout_builder__layout: true
